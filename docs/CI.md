@@ -114,9 +114,9 @@ Because this is a **monorepo**, the Pages project must be pointed at the
 - **Build configurations → Root directory → `website`** (otherwise CF deploys the
   whole repo as a static site)
 - No build command needed (`website/` is already static), no output directory
-- Custom domain: `capto.elwina.work` (CNAME → `capto.pages.dev`); `elwina.work`
-  DNS lives in Tencent Cloud, so the CNAME must be added there (or the zone fully
-  migrated to Cloudflare DNS)
+- Custom domain: `capto.elwina.work` — the `elwina.work` zone is hosted on
+  Cloudflare DNS, so Pages **Custom domains → Set up** provisions the record
+  and certificate automatically
 
 Cloudflare Pages is the primary entry; GitHub Pages remains as the fallback if
 Cloudflare is unreachable.
