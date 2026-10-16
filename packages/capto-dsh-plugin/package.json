@@ -30,13 +30,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elwina/Capto.git",
+    "url": "git+https://github.com/ciryanna/Capto.git",
     "directory": "packages/capto-dsh-plugin"
   },
   "bugs": {
-    "url": "https://github.com/elwina/Capto/issues"
+    "url": "https://github.com/ciryanna/Capto/issues"
   },
-  "homepage": "https://github.com/elwina/Capto/tree/main/packages/capto-dsh-plugin",
+  "homepage": "https://github.com/ciryanna/Capto/tree/main/packages/capto-dsh-plugin",
   "engines": {
     "node": ">=18"
   },

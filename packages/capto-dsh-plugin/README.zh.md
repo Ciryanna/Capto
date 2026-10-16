@@ -6,10 +6,10 @@
 
 [![npm version](https://img.shields.io/npm/v/capto-dsh-plugin?style=flat-square)](https://www.npmjs.com/package/capto-dsh-plugin)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/elwina/Capto/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/elwina/Capto/actions/workflows/ci.yml)
-[![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/elwina/Capto/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/ciryanna/Capto/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/ciryanna/Capto/actions/workflows/ci.yml)
+[![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/ciryanna/Capto/releases)
 
-`capto-dsh-plugin` 注册一组类型化的 `capto_*` 工具（`capto_status`、`capto_record_start`、`capto_shot` …），让 Harness agent 在任意对话里直接驱动**纯本地的 [Capto](https://github.com/elwina/Capto) Windows 录屏软件**——不 shell 出去、不碰 FFmpeg、不上云。
+`capto-dsh-plugin` 注册一组类型化的 `capto_*` 工具（`capto_status`、`capto_record_start`、`capto_shot` …），让 Harness agent 在任意对话里直接驱动**纯本地的 [Capto](https://github.com/ciryanna/Capto) Windows 录屏软件**——不 shell 出去、不碰 FFmpeg、不上云。
 
 - 🎬 **14 个类型化工具** —— status / doctor / open / list / shot / record / config / outputs，每个都有严格的参数 schema 和规范的 JSON 输出
 - 🧭 **面向 agent 的失败归一化** —— 每个 CLI 退出码都归一成 `Error: capto exited <code> (<errorCode>): <message>`；`desktopUnavailable`（exit 2）会直接告诉模型下一步（`capto_open` → 等待 → 重试）
@@ -18,7 +18,7 @@
 
 ## 环境要求
 
-- **Windows 10+**，已安装 Capto 桌面端——[安装包](https://github.com/elwina/Capto/releases)内置 FFmpeg 与 `capto` CLI，并把 `cli\` 加入 PATH
+- **Windows 10+**，已安装 Capto 桌面端——[安装包](https://github.com/ciryanna/Capto/releases)内置 FFmpeg 与 `capto` CLI，并把 `cli\` 加入 PATH
 - 正在运行的 **DeepSeek Harness** profile（`dsh web`、`dsh --profile headless` …）
 - Node ≥ 18（harness 运行时）
 
@@ -124,4 +124,4 @@ node test/smoke.mjs    # 11 项检查：契约、配置、参数映射、失败�
 
 ## 许可证
 
-MIT —— 属于 [Capto](https://github.com/elwina/Capto) 项目的一部分。见 [LICENSE](LICENSE)。
+MIT —— 属于 [Capto](https://github.com/ciryanna/Capto) 项目的一部分。见 [LICENSE](LICENSE)。

@@ -6,10 +6,10 @@ First-class **Capto screen-recording tools for [DeepSeek Harness](https://github
 
 [![npm version](https://img.shields.io/npm/v/capto-dsh-plugin?style=flat-square)](https://www.npmjs.com/package/capto-dsh-plugin)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/elwina/Capto/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/elwina/Capto/actions/workflows/ci.yml)
-[![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/elwina/Capto/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/ciryanna/Capto/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/ciryanna/Capto/actions/workflows/ci.yml)
+[![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/ciryanna/Capto/releases)
 
-`capto-dsh-plugin` registers a set of typed `capto_*` tools (`capto_status`, `capto_record_start`, `capto_shot`, …) so a Harness agent can drive the **local-only [Capto](https://github.com/elwina/Capto) Windows screen recorder** from any conversation — no shelling out, no FFmpeg, no cloud.
+`capto-dsh-plugin` registers a set of typed `capto_*` tools (`capto_status`, `capto_record_start`, `capto_shot`, …) so a Harness agent can drive the **local-only [Capto](https://github.com/ciryanna/Capto) Windows screen recorder** from any conversation — no shelling out, no FFmpeg, no cloud.
 
 - 🎬 **14 typed tools** — status / doctor / open / list / shot / record / config / outputs, each with a strict parameter schema and a canonical JSON output
 - 🧭 **Agent-friendly failures** — every CLI exit is normalized to `Error: capto exited <code> (<errorCode>): <message>`; `desktopUnavailable` (exit 2) tells the model exactly what to do next (`capto_open`, wait, retry)
@@ -18,7 +18,7 @@ First-class **Capto screen-recording tools for [DeepSeek Harness](https://github
 
 ## Requirements
 
-- **Windows 10+** with Capto desktop installed — the [installer](https://github.com/elwina/Capto/releases) embeds FFmpeg and the `capto` CLI and adds `cli\` to PATH
+- **Windows 10+** with Capto desktop installed — the [installer](https://github.com/ciryanna/Capto/releases) embeds FFmpeg and the `capto` CLI and adds `cli\` to PATH
 - A running **DeepSeek Harness** profile (`dsh web`, `dsh --profile headless`, …)
 - Node ≥ 18 (the harness runtime)
 
@@ -124,4 +124,4 @@ node test/smoke.mjs    # 11 checks: contract, config, arg mapping, failure
 
 ## License
 
-MIT — part of the [Capto](https://github.com/elwina/Capto) project. See [LICENSE](LICENSE).
+MIT — part of the [Capto](https://github.com/ciryanna/Capto) project. See [LICENSE](LICENSE).

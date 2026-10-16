@@ -6,8 +6,7 @@
 |----------|------|---------|---------|
 | **CI** | [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) | push/PR → `main` | Rust test + clippy (`cargo build --timings` uploaded), frontend `tsc` + lint + jscpd + knip + bundle-size, `cargo check` for **x64 + ARM64**, FFmpeg pin download + attestation, devcontainer build |
 | **Release** | [`.github/workflows/release.yml`](../.github/workflows/release.yml) | tag `v*` or manual | NSIS installers for both arches with **embedded** FFmpeg + CLI (`cli/capto.exe`); signed updater artifacts + rolling `updater` manifest |
-| **Pages** | [`.github/workflows/pages.yml`](../.github/workflows/pages.yml) | push → `main`, or manual | Deploy **one** GitHub Pages artifact: `website/` at the site root (`https://elwina.github.io/Capto/`) + workspace rustdoc under `/docs/`; Cloudflare Pages (`https://capto.elwina.work/`) deploys the same `website/` via the CF dashboard Git integration |
-| **Droid** | [`.github/workflows/droid.yml`](../.github/workflows/droid.yml), [`.github/workflows/droid-review.yml`](../.github/workflows/droid-review.yml) | `@droid` mentions / PRs | AI code + security review (Factory Droid; requires `FACTORY_API_KEY`) |
+| **Pages** | [`.github/workflows/pages.yml`](../.github/workflows/pages.yml) | push → `main`, or manual | Deploy **one** GitHub Pages artifact: `website/` at the site root (`https://ciryanna.github.io/Capto/`) + workspace rustdoc under `/docs/`; Cloudflare Pages (`https://capto.elwina.work/`) deploys the same `website/` via the CF dashboard Git integration |
 | **CI alert** | [`.github/workflows/ci-alert.yml`](../.github/workflows/ci-alert.yml) | `workflow_run` on CI/Release/Pages failures | Open/update a `[build-health]` GitHub issue when a required workflow fails (alerting + error→issue) |
 
 CI and Release are intentionally separate: green CI does not publish; Release does not replace day-to-day checks.
@@ -25,7 +24,7 @@ Desktop uses [`tauri-plugin-updater`](https://v2.tauri.app/plugin/updater/) with
 |-------|----------|
 | Public key | `apps/desktop/src-tauri/tauri.conf.json` → `plugins.updater.pubkey` |
 | Private key | GitHub Actions secret **`TAURI_SIGNING_PRIVATE_KEY`** (optional empty **`TAURI_SIGNING_PRIVATE_KEY_PASSWORD`**) |
-| Check URL | `https://github.com/elwina/Capto/releases/download/updater/latest.json` |
+| Check URL | `https://github.com/ciryanna/Capto/releases/download/updater/latest.json` |
 | Installer URLs | Inside `latest.json`, pointing at the versioned `v*` release assets |
 
 Each Release mirrors `latest.json` onto a rolling tag **`updater`** (manifest only), keeping the in-app check URL stable across releases. CDN / CF Worker mirrors can be added later as extra `endpoints` entries.
@@ -53,7 +52,7 @@ so we list the Worker first and GitHub second.
 ```json
 "endpoints": [
   "https://capto-update-proxy.elwina-vardal.workers.dev/updates/latest.json",
-  "https://github.com/elwina/Capto/releases/download/updater/latest.json"
+  "https://github.com/ciryanna/Capto/releases/download/updater/latest.json"
 ]
 ```
 
@@ -91,8 +90,8 @@ Pages and Cloudflare Pages (dual-active). GitHub Pages is driven by this repo's
 [`pages.yml`](../.github/workflows/pages.yml) on every push to `main` (or
 manual), and it deploys **one** artifact containing **both**:
 
-- site root `https://elwina.github.io/Capto/` → the `website/` landing page
-- `https://elwina.github.io/Capto/docs/` → rustdoc for the workspace lib crates
+- site root `https://ciryanna.github.io/Capto/` → the `website/` landing page
+- `https://ciryanna.github.io/Capto/docs/` → rustdoc for the workspace lib crates
   + CLI (`cargo doc --workspace --no-deps --exclude capto-app`)
 
 `pages.yml` is the *only* workflow that writes to the `github-pages`
@@ -101,7 +100,7 @@ environment. Cloudflare Pages is driven by the **CF dashboard Git integration**
 
 | Host | URL | Driver |
 |------|-----|--------|
-| GitHub Pages | `https://elwina.github.io/Capto/` (site root) + `/docs/` (rustdoc) | [`pages.yml`](../.github/workflows/pages.yml) `deploy` job (`actions/deploy-pages`) |
+| GitHub Pages | `https://ciryanna.github.io/Capto/` (site root) + `/docs/` (rustdoc) | [`pages.yml`](../.github/workflows/pages.yml) `deploy` job (`actions/deploy-pages`) |
 | Cloudflare Pages | `https://capto.elwina.work/` (primary) / `https://capto.pages.dev/` | CF dashboard → Workers & Pages → **Connect to Git** |
 
 ### Cloudflare Pages project (Git integration)
@@ -111,20 +110,20 @@ Because this is a **monorepo**, the Pages project must be pointed at the
 
 - Project name: `capto`, production branch `main`
 - In CF dashboard → Workers & Pages → **Create** → **Connect to Git**, authorize
-  GitHub and select `elwina/Capto`
+  GitHub and select `ciryanna/Capto`
 - **Build configurations → Root directory → `website`** (otherwise CF deploys the
   whole repo as a static site)
 - No build command needed (`website/` is already static), no output directory
-- Custom domain: `capto.elwina.work` (CNAME → `capto.pages.dev`); `elwina.work`
-  DNS lives in Tencent Cloud, so the CNAME must be added there (or the zone fully
-  migrated to Cloudflare DNS)
+- Custom domain: `capto.elwina.work` — the `elwina.work` zone is hosted on
+  Cloudflare DNS, so Pages **Custom domains → Set up** provisions the record
+  and certificate automatically
 
 Cloudflare Pages is the primary entry; GitHub Pages remains as the fallback if
 Cloudflare is unreachable.
 
 ## FFmpeg (security)
 
-Sidecar comes only from [`elwina/capto-ffmpeg`](https://github.com/elwina/capto-ffmpeg) Releases — never from PATH at runtime.
+Sidecar comes only from [`ciryanna/capto-ffmpeg`](https://github.com/ciryanna/capto-ffmpeg) Releases — never from PATH at runtime.
 
 Pin: [`.github/capto-ffmpeg.env`](../.github/capto-ffmpeg.env)
 

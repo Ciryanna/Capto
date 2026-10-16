@@ -1,8 +1,8 @@
 name: Deploy site + docs
 
 # Single source for GitHub Pages:
-#   https://elwina.github.io/Capto/        → static landing page from website/
-#   https://elwina.github.io/Capto/docs/   → rustdoc for the workspace (lib crates + CLI)
+#   https://ciryanna.github.io/Capto/        → static landing page from website/
+#   https://ciryanna.github.io/Capto/docs/   → rustdoc for the workspace (lib crates + CLI)
 # This is the ONLY workflow writing to the github-pages environment — previous
 # setup had deploy-website.yml and docs.yml both deploying the same Pages site,
 # so the later-finishing run silently replaced the homepage with the API docs.

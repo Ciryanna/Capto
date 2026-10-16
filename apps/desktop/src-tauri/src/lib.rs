@@ -642,7 +642,7 @@ struct FfmpegInfo {
     /// Full first line of `ffmpeg -version` (tooltip / detail).
     ffmpeg_version_line: Option<String>,
     path: Option<String>,
-    /// GitHub repo slug, e.g. `elwina/capto-ffmpeg`.
+    /// GitHub repo slug, e.g. `ciryanna/capto-ffmpeg`.
     repository: Option<String>,
 }
 

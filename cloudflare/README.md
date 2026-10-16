@@ -8,7 +8,7 @@ update checks and installer downloads get a faster CDN edge (helpful where
 
 | Route | Behaviour |
 |-------|-----------|
-| `GET /updates/latest.json` | **Stable channel**: fetches `elwina/Capto` release tag `updater/latest.json`, rebuilds each `url` from the manifest `version` into a `github.com/.../releases/download/<tag>/<file>` browser URL, points it at this worker's download route, returns the JSON. |
+| `GET /updates/latest.json` | **Stable channel**: fetches `ciryanna/Capto` release tag `updater/latest.json`, rebuilds each `url` from the manifest `version` into a `github.com/.../releases/download/<tag>/<file>` browser URL, points it at this worker's download route, returns the JSON. |
 | `GET /updates/canary.json` | **Canary channel (progressive rollout)**: same as above but reads the rolling `canary` release tag, so a small tester cohort can opt in to new versions before stable promotion. |
 | `GET /updates/download/*`  | Streams a GitHub release asset through this worker (CF CDN caches it). |
 | `OPTIONS` | CORS preflight. |
@@ -51,7 +51,7 @@ Edit `apps/desktop/src-tauri/tauri.conf.json` → `plugins.updater.endpoints`:
 ```json
 "endpoints": [
   "https://capto-update-proxy.elwina-vardal.workers.dev/updates/latest.json",
-  "https://github.com/elwina/Capto/releases/download/updater/latest.json"
+  "https://github.com/ciryanna/Capto/releases/download/updater/latest.json"
 ]
 ```
 
@@ -69,7 +69,7 @@ curl http://localhost:8787/updates/latest.json
 # -> JSON with url fields pointing at /updates/download/https%3A%2F%2Fgithub.com%2F...
 
 # Grab one url, decode it, and hit it:
-curl -I "http://localhost:8787/updates/download/https%3A%2F%2Fgithub.com%2Felwina%2FCapto%2Freleases%2Fdownload%2Fv0.4.0%2FCapto_0.4.0_x64-setup.exe"
+curl -I "http://localhost:8787/updates/download/https%3A%2F%2Fgithub.com%2Fciryanna%2FCapto%2Freleases%2Fdownload%2Fv0.4.0%2FCapto_0.4.0_x64-setup.exe"
 # -> 200, content-length (the real installer size), cache-control: immutable
 ```
 

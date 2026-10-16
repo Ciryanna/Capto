@@ -38,7 +38,7 @@ function Read-PinnedEnv {
 
 $pinned = Read-PinnedEnv
 if (-not $Repository) {
-    $Repository = if ($env:CAPTO_FFMPEG_REPO) { $env:CAPTO_FFMPEG_REPO } elseif ($pinned["CAPTO_FFMPEG_REPO"]) { $pinned["CAPTO_FFMPEG_REPO"] } else { "elwina/capto-ffmpeg" }
+    $Repository = if ($env:CAPTO_FFMPEG_REPO) { $env:CAPTO_FFMPEG_REPO } elseif ($pinned["CAPTO_FFMPEG_REPO"]) { $pinned["CAPTO_FFMPEG_REPO"] } else { "ciryanna/capto-ffmpeg" }
 }
 if (-not $Tag) {
     $Tag = if ($env:CAPTO_FFMPEG_TAG) { $env:CAPTO_FFMPEG_TAG } elseif ($pinned["CAPTO_FFMPEG_TAG"]) { $pinned["CAPTO_FFMPEG_TAG"] } else { "v1.0.0-n9.0" }

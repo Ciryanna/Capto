@@ -10,7 +10,7 @@ start website/index.html
 npx --yes serve website
 ```
 
-Live site: [https://elwina.github.io/Capto/](https://elwina.github.io/Capto/) (API docs at [https://elwina.github.io/Capto/docs/](https://elwina.github.io/Capto/docs/))
+Live site: [https://ciryanna.github.io/Capto/](https://ciryanna.github.io/Capto/) (API docs at [https://ciryanna.github.io/Capto/docs/](https://ciryanna.github.io/Capto/docs/))
 
 Deployed as part of [`.github/workflows/pages.yml`](../.github/workflows/pages.yml)
 (GitHub Pages → **GitHub Actions**, single artifact: this page at the site root

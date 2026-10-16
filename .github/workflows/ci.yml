@@ -250,10 +250,10 @@ jobs:
         # disk. The smoke command only checks the toolchain (rust/node/pwsh);
         # compiling native capture crates needs OS audio/display headers CI
         # cannot provide. push: never keeps it a pure build+run gate (this
-        # repo has no write access to the ghcr.io/elwina package).
+        # repo has no write access to the ghcr.io/ciryanna package).
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/elwina/capto-devcontainer
-          cacheFrom: ghcr.io/elwina/capto-devcontainer:latest
+          imageName: ghcr.io/ciryanna/capto-devcontainer
+          cacheFrom: ghcr.io/ciryanna/capto-devcontainer:latest
           push: never
           runCmd: bash -lc 'cargo --version && node --version && pwsh --version'

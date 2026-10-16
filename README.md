@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/elwina/Capto/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/elwina/Capto/ci.yml?branch=main&style=flat-square&label=CI" alt="CI" /></a>
-  <a href="https://github.com/elwina/Capto/releases/latest"><img src="https://img.shields.io/github/v/release/elwina/Capto?include_prereleases&style=flat-square&label=release" alt="Release" /></a>
+  <a href="https://github.com/ciryanna/Capto/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/ciryanna/Capto/ci.yml?branch=main&style=flat-square&label=CI" alt="CI" /></a>
+  <a href="https://github.com/ciryanna/Capto/releases/latest"><img src="https://img.shields.io/github/v/release/ciryanna/Capto?include_prereleases&style=flat-square&label=release" alt="Release" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License" /></a>
-  <a href="https://github.com/elwina/Capto/releases"><img src="https://img.shields.io/github/downloads/elwina/Capto/total?style=flat-square" alt="Downloads" /></a>
+  <a href="https://github.com/ciryanna/Capto/releases"><img src="https://img.shields.io/github/downloads/ciryanna/Capto/total?style=flat-square" alt="Downloads" /></a>
   <a href="https://www.npmjs.com/package/capto-agent-skill"><img src="https://img.shields.io/npm/v/capto-agent-skill?style=flat-square&label=capto-agent-skill" alt="npm" /></a>
   <a href="https://www.npmjs.com/package/capto-dsh-plugin"><img src="https://img.shields.io/npm/v/capto-dsh-plugin?style=flat-square&label=capto-dsh-plugin" alt="npm" /></a>
   <img src="https://img.shields.io/badge/platform-Windows%2010%2B-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
@@ -22,8 +22,8 @@
 
 <p align="center">
   <a href="README.zh-CN.md">中文</a> ·
-  <a href="https://elwina.github.io/Capto/">Website</a> ·
-  <a href="https://github.com/elwina/Capto/releases">Releases</a>
+  <a href="https://ciryanna.github.io/Capto/">Website</a> ·
+  <a href="https://github.com/ciryanna/Capto/releases">Releases</a>
 </p>
 
 ## Why Capto
@@ -39,7 +39,7 @@
 
 ## Install
 
-Download the NSIS setup for your CPU (**x64** / **arm64**) from [Releases](https://github.com/elwina/Capto/releases). Installers embed verified FFmpeg from [`capto-ffmpeg`](https://github.com/elwina/capto-ffmpeg) and the `capto` CLI at `<install>\cli\capto.exe`, and add that `cli` folder to your user **PATH** so `capto` works in new terminals (not a separate download).
+Download the NSIS setup for your CPU (**x64** / **arm64**) from [Releases](https://github.com/ciryanna/Capto/releases). Installers embed verified FFmpeg from [`capto-ffmpeg`](https://github.com/ciryanna/capto-ffmpeg) and the `capto` CLI at `<install>\cli\capto.exe`, and add that `cli` folder to your user **PATH** so `capto` works in new terminals (not a separate download).
 
 ### AI / agent support
 

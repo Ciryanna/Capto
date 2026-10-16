@@ -47,7 +47,7 @@ worst case (assume compromise). A working-tree-only detection on a PR is low.
 - Keep **dependabot** and **Renovate** enabled: `.github/dependabot.yml` and
   `renovate.json` (minimumReleaseAge 3 days) update Rust + npm deps.
 - All npm deps: use `npm ci`; lockfiles are committed.
-- FFmpeg sidecar: shipped via `elwina/capto-ffmpeg` release with SHA-256 +
+- FFmpeg sidecar: shipped via `ciryanna/capto-ffmpeg` release with SHA-256 +
   attestation checks (`CAPTO_FFMPEG_VERIFY_ATTESTATION=1`). Never vendor
   unverified binaries.
 - `GH_TOKEN` / signing keys exist only as GitHub Actions secrets, never in the
@@ -56,14 +56,8 @@ worst case (assume compromise). A working-tree-only detection on a PR is low.
   enforced. No required status checks are configured — direct push is
   available and PRs merge without a checks gate (CI/CodeQL/Secret scanning
   still run, but they do not block merges).
-- **Droid review secret**: the Factory Droid workflows
-  (`.github/workflows/droid.yml`, `droid-review.yml`) read a `FACTORY_API_KEY`
-  Actions secret — a real key must **never** be committed; a missing secret
-  makes those jobs fail until it is added. Such a failure is therefore
-  expected until setup, and it does **not** block merges (it is not a
-  required check).
 
 ## Owner
 
-Maintainer (`@elwina` per `CODEOWNERS`). Any alert that blocks a release is a
+Maintainer (`@ciryanna` per `CODEOWNERS`). Any alert that blocks a release is a
 P1 for the release owner.
