@@ -21,7 +21,7 @@ Supporting facts（支撑论据，非主钩子）:
 > Import the **capto** skill into WorkBuddy → the agent directly drives Capto: record display / window / region, take screenshots, export MP4 or GIF — all on your local machine.
 >
 > The app itself is just 10 MB. Local-only, MIT, no cloud.
-> 👉 https://github.com/elwina/Capto
+> 👉 https://github.com/ciryanna/Capto
 > #WorkBuddy #AgentSkills #AI #ScreenRecorder
 
 **中文**
@@ -31,7 +31,7 @@ Supporting facts（支撑论据，非主钩子）:
 > 把 **capto** skill 导入 WorkBuddy → agent 直接驱动 Capto：录显示器 / 窗口 / 区域、截图、导出 MP4 / GIF——全在本机完成。
 >
 > 应用本体只有 10 MB。纯本地，MIT，不上云。
-> 👉 https://github.com/elwina/Capto
+> 👉 https://github.com/ciryanna/Capto
 > #WorkBuddy #AgentSkills #AI #录屏
 
 ---
@@ -98,7 +98,7 @@ Supporting facts（支撑论据，非主钩子）:
 >
 > DeepSeek Harness users get the same power as a native plugin — 14 typed `capto_*` tools.
 >
-> Install: https://github.com/elwina/Capto/releases
+> Install: https://github.com/ciryanna/Capto/releases
 > Skill: https://www.npmjs.com/package/capto-agent-skill
 > DSH plugin: https://www.npmjs.com/package/capto-dsh-plugin
 >
@@ -117,7 +117,7 @@ Supporting facts（支撑论据，非主钩子）:
 >
 > DeepSeek Harness 用户则可用原生插件获得同等能力——14 个类型化 `capto_*` 工具。
 >
-> 安装：https://github.com/elwina/Capto/releases
+> 安装：https://github.com/ciryanna/Capto/releases
 > Skill：https://www.npmjs.com/package/capto-agent-skill
 > DSH 插件：https://www.npmjs.com/package/capto-dsh-plugin
 >
@@ -134,13 +134,13 @@ Supporting facts（支撑论据，非主钩子）:
 > 把 **capto** skill 导入 WorkBuddy → agent 直接驱动 Capto：录显示器 / 窗口 / 区域、截图、MP4 / GIF，全在本机完成。
 >
 > 应用本体只有 10 MB，纯本地、MIT、不上云。
-> 👉 https://github.com/elwina/Capto
+> 👉 https://github.com/ciryanna/Capto
 > #WorkBuddy #AgentSkills #AI #录屏
 
 **EN（备用）**
 
 > Your AI can control your screen recorder now 🎬 Import the **capto** skill into WorkBuddy → the agent directly records display / window / region, takes screenshots, exports MP4/GIF — all local, 10 MB app, no cloud.
-> 👉 https://github.com/elwina/Capto
+> 👉 https://github.com/ciryanna/Capto
 
 ---
 
@@ -153,7 +153,7 @@ Supporting facts（支撑论据，非主钩子）:
 
 ## Posting checklist / 发布清单
 
-- [ ] 确认网站 `https://elwina.github.io/Capto/` 可访问
+- [ ] 确认网站 `https://ciryanna.github.io/Capto/` 可访问
 - [ ] X 主帖发布后置顶 24 h；配图优先用"对话操控"截图
 - [ ] 回复评论时带上 skill / plugin 的 npm 链接
 - [ ] 中文版同日同步到微博 / 即刻

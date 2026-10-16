@@ -95,4 +95,4 @@ See [CROSS_PLATFORM.md](CROSS_PLATFORM.md) for macOS / Linux recording backend r
 
 ## CI / Release
 
-See [CI.md](CI.md) for GitHub Actions (CI vs Release, x64 + ARM64, FFmpeg pin from `elwina/capto-ffmpeg`).
+See [CI.md](CI.md) for GitHub Actions (CI vs Release, x64 + ARM64, FFmpeg pin from `ciryanna/capto-ffmpeg`).

@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="README.md">English</a> ·
-  <a href="https://elwina.github.io/Capto/">Website</a> ·
-  <a href="https://github.com/elwina/Capto/releases">Releases</a>
+  <a href="https://ciryanna.github.io/Capto/">Website</a> ·
+  <a href="https://github.com/ciryanna/Capto/releases">Releases</a>
 </p>
 
 ## 为什么选 Capto
@@ -28,7 +28,7 @@
 
 ## 安装
 
-从 [Releases](https://github.com/elwina/Capto/releases) 下载 x64 / arm64 NSIS 安装包。内嵌经验证的 FFmpeg（[`capto-ffmpeg`](https://github.com/elwina/capto-ffmpeg)）以及 CLI：`<安装目录>\cli\capto.exe`；安装时会把该 `cli` 目录写入用户 **PATH**，新开终端即可直接运行 `capto`（不再单独发布 CLI）。
+从 [Releases](https://github.com/ciryanna/Capto/releases) 下载 x64 / arm64 NSIS 安装包。内嵌经验证的 FFmpeg（[`capto-ffmpeg`](https://github.com/ciryanna/capto-ffmpeg)）以及 CLI：`<安装目录>\cli\capto.exe`；安装时会把该 `cli` 目录写入用户 **PATH**，新开终端即可直接运行 `capto`（不再单独发布 CLI）。
 
 ### AI / Agent 支持
 

@@ -92,11 +92,11 @@ jobs:
           releaseBody: |
             Capto **v__VERSION__** (Windows).
 
-            - Bundled FFmpeg from [`elwina/capto-ffmpeg`](https://github.com/elwina/capto-ffmpeg) (SHA-256 + attestation; pin in `.github/capto-ffmpeg.env`)
+            - Bundled FFmpeg from [`ciryanna/capto-ffmpeg`](https://github.com/ciryanna/capto-ffmpeg) (SHA-256 + attestation; pin in `.github/capto-ffmpeg.env`)
             - Bundled CLI (`<install>\cli\capto.exe`) added to user PATH — not a separate download
             - Architectures: **x64**, **arm64**
             - Installer: NSIS `.exe` setup (signed updater artifacts included)
-            - In-app updates read `latest.json` from the rolling [`updater`](https://github.com/elwina/Capto/releases/tag/updater) channel
+            - In-app updates read `latest.json` from the rolling [`updater`](https://github.com/ciryanna/Capto/releases/tag/updater) channel
 
             Install the setup matching your CPU. After install, open a **new** terminal and run `capto doctor`.
           releaseDraft: ${{ github.event_name == 'workflow_dispatch' && inputs.draft || false }}

@@ -62,7 +62,7 @@
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDhCQTY5N0YxMDhBMjY0NUEKUldSYVpLSUk4WmVtaTJ6UE5ic0t5OWJKMmxvTjltY2tDTjhpbWx3SlI0MFJlbHFxeERjMndCcFEK",
       "endpoints": [
         "https://capto-update-proxy.elwina-vardal.workers.dev/updates/latest.json",
-        "https://github.com/elwina/Capto/releases/download/updater/latest.json"
+        "https://github.com/ciryanna/Capto/releases/download/updater/latest.json"
       ],
       "windows": {
         "installMode": "passive"

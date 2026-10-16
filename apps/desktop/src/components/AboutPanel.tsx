@@ -14,8 +14,8 @@ interface FfmpegInfo {
   repository: string | null;
 }
 
-const CAPTO_REPO_URL = "https://github.com/elwina/Capto";
-const CAPTO_LICENSE_URL = "https://github.com/elwina/Capto/blob/main/LICENSE";
+const CAPTO_REPO_URL = "https://github.com/ciryanna/Capto";
+const CAPTO_LICENSE_URL = "https://github.com/ciryanna/Capto/blob/main/LICENSE";
 const DEVELOPER_NAME = "Elwina Vardal";
 const DEVELOPER_SITE = "https://www.elwina.work";
 const DEVELOPER_GITHUB = "https://github.com/elwina";
@@ -86,7 +86,7 @@ export function AboutPanel() {
       );
   }, []);
 
-  const ffmpegRepo = repoUrl(ffmpeg?.repository ?? "elwina/capto-ffmpeg");
+  const ffmpegRepo = repoUrl(ffmpeg?.repository ?? "ciryanna/capto-ffmpeg");
 
   return (
     <div className="about-stack">

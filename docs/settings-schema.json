@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/elwina/Capto/blob/main/docs/settings-schema.json",
+  "$id": "https://github.com/ciryanna/Capto/blob/main/docs/settings-schema.json",
   "title": "Capto settings.json",
   "description": "Data model of the persisted local settings file. Capto has no database by design (see docs/data.md); the serde type AppSettings (crates/capto-core/src/settings.rs) is the single source of truth and this file mirrors its serialized camelCase shape. Use it to validate or edit settings.json.",
   "type": "object",

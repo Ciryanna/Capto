@@ -31,13 +31,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elwina/Capto.git",
+    "url": "git+https://github.com/ciryanna/Capto.git",
     "directory": "packages/capto-agent-skill"
   },
   "bugs": {
-    "url": "https://github.com/elwina/Capto/issues"
+    "url": "https://github.com/ciryanna/Capto/issues"
   },
-  "homepage": "https://github.com/elwina/Capto/tree/main/packages/capto-agent-skill",
+  "homepage": "https://github.com/ciryanna/Capto/tree/main/packages/capto-agent-skill",
   "engines": {
     "node": ">=18"
   },

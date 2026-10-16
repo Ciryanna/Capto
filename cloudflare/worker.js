@@ -24,7 +24,7 @@
  * docs/CI.md).
  */
 
-const GITHUB_REPO = 'elwina/Capto';
+const GITHUB_REPO = 'ciryanna/Capto';
 
 // The rolling tag that hosts only latest.json (see docs/CI.md).
 const UPDATER_TAG = 'updater';
@@ -49,7 +49,7 @@ const TARGET_ARCH = {
 /**
  * Build the browser download URL for a target from the manifest version.
  * e.g. version "0.4.0", target "windows-x86_64" ->
- *   https://github.com/elwina/Capto/releases/download/v0.4.0/Capto_0.4.0_x64-setup.exe
+ *   https://github.com/ciryanna/Capto/releases/download/v0.4.0/Capto_0.4.0_x64-setup.exe
  * Returns null when the target or version can't be mapped.
  */
 function browserDownloadUrl(version, target) {

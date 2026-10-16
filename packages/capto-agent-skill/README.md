@@ -2,7 +2,7 @@
 
 [Agent Skills](https://agentskills.io) package for **Capto** — a local-only Windows screen recorder.
 
-Agents drive Capto with the `capto` CLI (JSON over a localhost control plane). This package ships skill docs only; install Capto from [Releases](https://github.com/elwina/Capto/releases) — the installer includes the CLI and adds it to PATH (`capto` in new terminals).
+Agents drive Capto with the `capto` CLI (JSON over a localhost control plane). This package ships skill docs only; install Capto from [Releases](https://github.com/ciryanna/Capto/releases) — the installer includes the CLI and adds it to PATH (`capto` in new terminals).
 
 ## Install
 
