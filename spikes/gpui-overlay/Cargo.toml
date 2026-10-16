@@ -9,9 +9,15 @@ description = "GPUI overlay spike — validates transparent always-on-top window
 name = "gpui-overlay-spike"
 path = "src/main.rs"
 
+[[bin]]
+name = "gpui-frames-spike"
+path = "src/bin/frames.rs"
+
 [dependencies]
 gpui = "=0.2.2"
 raw-window-handle = "0.6"
+image = "0.25"
+smallvec = "1"
 tracing-subscriber = { workspace = true }
 
 [target.'cfg(target_os = "windows")'.dependencies]
