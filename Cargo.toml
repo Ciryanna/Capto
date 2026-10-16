@@ -10,6 +10,7 @@ members = [
   "crates/capto-hooks",
   "crates/capto-ipc",
   "crates/capto-cli",
+  "spikes/gpui-overlay",
 ]
 
 [workspace.package]
