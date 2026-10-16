@@ -13,11 +13,23 @@ path = "src/main.rs"
 name = "gpui-frames-spike"
 path = "src/bin/frames.rs"
 
+# NOTE: Windows Installer Detection force-elevates any exe whose name
+# contains "update"/"setup"/"install" (os error 740). A future
+# capto-updater helper must embed a manifest with asInvoker — or pick a
+# neutral name like this one.
+[[bin]]
+name = "relcheck-spike"
+path = "src/bin/updater.rs"
+
 [dependencies]
 gpui = "=0.2.2"
 raw-window-handle = "0.6"
 image = "0.25"
 smallvec = "1"
+minisign-verify = "0.2"
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+reqwest = { workspace = true, features = ["blocking"] }
 tracing-subscriber = { workspace = true }
 
 [target.'cfg(target_os = "windows")'.dependencies]
